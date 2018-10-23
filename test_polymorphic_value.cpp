@@ -93,8 +93,6 @@ TEST_CASE("Value constructor rvalue", "[polymorphic_value.constructors]")
 {
   polymorphic_value<BaseType> i(DerivedType(7));
 
-  polymorphic_value<BaseType> i(std::move(d));
-
   REQUIRE(i->value() == 7);
 }
 
